@@ -311,3 +311,13 @@ djmemc_write(int reg, uint64_t value, unsigned int size) "reg=0x%x value=0x%"PRI
 # iosb.c
 iosb_read(int reg, uint64_t value, unsigned int size) "reg=0x%x value=0x%"PRIx64" size=%u"
 iosb_write(int reg, uint64_t value, unsigned int size) "reg=0x%x value=0x%"PRIx64" size=%u"
+
+# bcm2838_rng200.c
+bcm2838_rng200_rng_soft_reset(void) "========= RNumG SOFT RESET ========="
+bcm2838_rng200_rbg_soft_reset(void) "========= RBitG SOFT RESET ========="
+bcm2838_rng200_enable_rbg(void)     "========= RBitG ENABLED ========="
+bcm2838_rng200_disable_rbg(void)    "========= RBitG DISABLED ========="
+bcm2838_rng200_update_fifo(uint32_t len, uint32_t fifo_len)    "len %u, fifo_len %u"
+bcm2838_rng200_fifo_full(void) "========= RNumG FIFO FULL ========="
+bcm2838_rng200_write(void *addr, uint64_t value, unsigned size) "addr %p, value 0x%016" PRIx64 ", size %u"
+bcm2838_rng200_read(void *addr, unsigned size, uint64_t value) "addr %p, size %u, value 0x%016" PRIx64
