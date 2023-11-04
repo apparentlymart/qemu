@@ -131,6 +131,12 @@ static void bcm2838_realize(DeviceState *dev, Error **errp)
     }
 
     if (!object_property_set_bool(OBJECT(&s->gic),
+                                  "has-security-extensions", true,
+                                  errp)) {
+        return;
+    }
+
+    if (!object_property_set_bool(OBJECT(&s->gic),
                                   "has-virtualization-extensions", true,
                                   errp)) {
         return;
